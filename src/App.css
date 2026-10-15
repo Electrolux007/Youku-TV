@@ -1,0 +1,196 @@
+:root {
+  --darkbg: #0F1115;
+  --surface: #171A21;
+  --border: #2A2F38;
+  --primarytext: #E6E8EB;
+  --secondarytext: #9AA3B2;
+  --surface: #171A21;
+  --buttonbg: #0B6FC2;
+  --icon: #C9CED6;
+  --iconhover: rgba(255, 255, 255, 0.08);
+  --hover-bg: #1b2a3d;
+  --hover-icon: #E6E8EB;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: var(--darkbg);
+  color: var(--primarytext);
+}
+
+
+.nav-one {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
+  position: relative;
+}
+
+.left-side {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin: 0px 10px 10px 10px;
+  justify-self: start;
+}
+
+.middle-side {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  margin:  0 auto;
+  margin-left: 10px;
+  gap: 0px;
+  /* justify-content: space-between; */
+  margin: 0px 10px 10px 10px;
+  justify-self: center;
+  position: absolute;
+  right: 310px;
+}
+
+.right-side {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  justify-content: space-between;
+  margin: 0px 10px 10px 10px;
+  justify-self: end;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+}
+
+.search-bar-icon {
+  position: absolute;
+  right: 0px;
+  background-color: var(--buttonbg);
+  padding: 6px;
+  font-size: 26px;
+  border-radius: 0px 20px 20px 0px;
+  border-left: 1px solid var(--border);
+  color: #FFFFFF;
+}
+
+.plus {
+  color: #FFFFFF;
+  font-size: 25px;
+  padding: 1px;
+}
+
+.search-bar-input {
+  width: 600px;
+  height: 36px;
+  border-radius: 20px;
+  border: 1px solid #2A2F38;
+  font-size: 18px;
+  padding-left: 10px;
+  background-color: #171A21;
+  color: #E6E8EB;
+  border-bottom: 0.3px solid #2A2F38;
+}
+
+.search-bar-input::placeholder {
+  color: #7C8594;
+}
+
+.search-bar-input:focus {
+  border: 1px solid #0B74C5;
+}
+
+.Youkuimg {
+  height: 34px;
+  margin-right: 35px;
+}
+
+.accountbtn {
+  border-radius: 50%;
+}
+
+.accountbtn:hover {
+  background-color: var(--iconhover);
+}
+
+.createAccount {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--icon);
+  font-size: 24px;
+  transition: background 0.15s, color 0.15s;
+}
+
+.createAccount:hover {
+  background: var(--iconhover);
+  color: var(--primary);
+}
+
+.createAccount:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.notifs {
+  padding: 10px;
+  color: var(--icon);
+  font-size: 24px;
+}
+
+.acc {
+  padding: 10px;
+  color: var(--icon);
+  font-size: 24px;
+}
+
+.notifs-div {
+  display: flex;
+  align-items: center;
+}
+
+.acc-div {
+  display: flex;
+  align-items: center;
+}
+
+.notifs-div:hover {
+  background-color: var(--iconhover);
+  border-radius: 50%;
+  border: 0px solid #1B2A3D;
+  color: var(--hover-icon);
+
+}
+
+.acc-div:hover {
+  background-color: var(--iconhover);
+  border: 0px solid #1B2A3D;
+  border-radius: 50%;
+  color: var(--hover-icon);
+
+}
+
+.hamburger {
+  padding: 10px;
+  color: var(--icon);
+  font-size: 24px;
+}
+
+.hamburger:hover {
+  background-color: var(--iconhover);
+  border: 0px solid #1B2A3D;
+  border-radius: 50%;
+  color: var(--hover-icon);
+
+}
