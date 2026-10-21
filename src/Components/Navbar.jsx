@@ -1,67 +1,57 @@
 import React from "react";
-import { IoMdSearch } from "react-icons/io";
-import { MdAccountCircle } from "react-icons/md";
-import { IoIosNotifications } from "react-icons/io";
+import { IoMdSearch, IoMdAdd } from "react-icons/io";
 import { RxHamburgerMenu } from "react-icons/rx";
-import { MdOutlineAccountBox } from "react-icons/md";
-import { MdOutlineNotifications } from "react-icons/md";
-
+import { MdOutlineAccountBox, MdOutlineNotifications, MdExplore } from "react-icons/md";
+import { HiSparkles, HiFire } from "react-icons/hi";
 import "../App.css";
 import logo from "../assets/Youku_Logo_3EA6FF_cropped.png";
-import search from "../assets/search_24dp_EEEEEE_FILL0_wght400_GRAD0_opsz24.png";
-
-import notifications from "../assets/notifications_24dp_344054_FILL0_wght400_GRAD0_opsz24.png";
-
-import account from "../assets/account_circle_24dp_344054_FILL0_wght400_GRAD0_opsz24.png";
-
-import { IoMdAdd } from "react-icons/io";
-
-import hamburger from "../assets/menu_24dp_344054_FILL0_wght400_GRAD0_opsz24.png";
 
 const Navbar = () => {
     return (
-        <>
+        <header className="bili-header">
             <nav className="nav-one">
-                <div className="left-side">
-                    <RxHamburgerMenu className="hamburger" />
-                    <img className="Youkuimg" src={logo} alt="" />
-                </div>
 
+                <div className="left-side">
+                    <button className="hamburger-btn" aria-label="Toggle Sidebar">
+                        <RxHamburgerMenu className="hamburger-icon" />
+                    </button>
+                    <img className="Youkuimg" src={logo} alt="Logo" />
+                    <ul className="nav-links">
+                        <li className="nav-link active"><HiSparkles /> For you</li>
+                        <li className="nav-link"><HiFire /> Trending</li>
+                        <li className="nav-link"><MdExplore /> Explore</li>
+                    </ul>
+                </div>
 
                 <div className="middle-side">
                     <div className="search-bar">
                         <input
                             type="text"
                             className="search-bar-input"
-                            placeholder="Search..."
+                            placeholder="Search video, creator, or anime..."
                         />
-                        <IoMdSearch className="search-bar-icon" />
-                    </div>
-                </div>
-
-
-                <div className="right-side">
-                    <div className="accountbtn">
-                        <button
-                            className="createAccount"
-                            title="Create Account "
-                            aria-label="Create Account"
-                        >
-                            <IoMdAdd className="plus" />
+                        <button className="search-btn" aria-label="Search">
+                            <IoMdSearch className="search-bar-icon" />
                         </button>
                     </div>
-                    <div className="notifs-div">
-                        <MdOutlineNotifications className="notifs" />
+                </div>
+
+                <div className="right-side">
+                    <button className="createAccount" title="Upload Video">
+                        <IoMdAdd className="plus" />
+                        <span>Contribute</span>
+                    </button>
+
+                    <div className="icon-action-div" title="Notifications">
+                        <MdOutlineNotifications className="action-icon" />
                     </div>
-                    <div className="acc-div">
-                        <MdOutlineAccountBox className="acc" />
+
+                    <div className="icon-action-div" title="Account">
+                        <MdOutlineAccountBox className="action-icon" />
                     </div>
                 </div>
             </nav>
-            <nav>
-                
-            </nav>
-        </>
+        </header>
     );
 };
 
